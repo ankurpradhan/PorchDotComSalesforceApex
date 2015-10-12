@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Event__c</fullName>
+        <description>Porch.com Event</description>
+        <externalId>false</externalId>
+        <label>Event</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Fields_Tracked__c</fullName>
+        <description>Salesforce fields to track for the Porch.com event.When a value changes for any of these fields, the corresponding record is expected to have met a Porch.com event</description>
+        <externalId>false</externalId>
+        <label>Fields Tracked</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Source_Type__c</fullName>
+        <description>Salesforce object type</description>
+        <externalId>false</externalId>
+        <label>Source Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Porch Event Field Mapping</label>
+    <visibility>Public</visibility>
+</CustomObject>
