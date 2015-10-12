@@ -1,0 +1,36 @@
+<apex:page showHeader="true" sidebar="true" standardController="Time_Off__c" extensions="TimeOffEntrycontroller">
+    
+    <apex:form >
+    <apex:sectionHeader title="Time Off"/>
+    <apex:pageBlock title="Time Off">
+        <apex:pageBlockButtons >
+            <apex:commandButton value="Add More" action="{!AddFiveEntry}" title="Add More" reRender="table"></apex:commandButton>
+            <apex:commandButton value="Save" action="{!SaveEntry}" reRender="Error,table"/>
+            
+        </apex:pageBlockButtons>
+        <apex:outputPanel id="Error"  >
+            <apex:pageMessages ></apex:pageMessages>
+            <apex:pageMessage summary="{!Message}" severity="warning" strength="3" rendered="{!showUpdate}"></apex:pageMessage>
+        </apex:outputPanel>
+
+        
+        
+        <apex:outputPanel id="table">
+        <apex:pageBlockSection title="Bulk Time Off Entries">
+            <apex:pageBlockTable value="{!TimeOffEntryList}" var="TO">
+                <apex:column headerValue="Employee">
+                    <apex:inputField value="{!TO.Employee__c}"></apex:inputField>
+                </apex:column>
+                <apex:column headerValue="Date Off">
+                    <apex:inputField value="{!TO.Date_Off__c}"></apex:inputField>
+                </apex:column>
+                <apex:column headerValue="Absence Type">
+                    <apex:inputField value="{!TO.Absence_Tyype__c}"></apex:inputField>
+                </apex:column>
+                
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+        </apex:outputPanel>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>
